@@ -1,5 +1,11 @@
 @import 'vendor/normalize';
 
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
 .full-container {
     width: 1860px;
     margin: 0 auto;
@@ -8,47 +14,4 @@
     // background: teal;
 }
 
-.header {
-    border-bottom: 1px solid #E8E6F8;
-
-    &__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 0;
-    }
-
-    &__left {
-        display: flex;
-        width: 500px;
-    }
-    &__right {
-        display: flex;
-        width: 450px;
-    }
-
-    &__logo {
-        margin-right: 65px;
-    }
-
-
-    &__location {
-        display: flex;
-        align-items: center;
-
-        &--icon {
-            display: flex;
-            align-items: center;
-
-            &::before {
-                content: '';
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                margin-right: 5px;
-                background: url('../img/header/location.svg') no-repeat center/ cover;
-            }
-        }
-    }
-
-}
+@import 'parts/_header'
