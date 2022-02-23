@@ -38,6 +38,15 @@ $cart_count_color: #FFB82E;
         display: flex;
         align-items: center;
 
+        &-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
         &-icon {
             display: flex;
             align-items: center;
@@ -84,6 +93,16 @@ $cart_count_color: #FFB82E;
     
 
     &__search {
+
+        &-input {
+            // background: red;
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 800px;
+            }
+        }
 
         // &-btn {
         //     &::before {

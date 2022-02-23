@@ -14,4 +14,16 @@ body, html {
     // background: teal;
 }
 
-@import 'parts/_header'
+.container {
+    width: 1460px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* HEADER */
+@import 'parts/_header';
+
+/* MAIN */
+@import 'parts/_main';
