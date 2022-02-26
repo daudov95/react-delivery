@@ -1,0 +1,106 @@
+.main-restaraunt {
+    margin-top: 40px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 56px;
+        margin-bottom: 20px;
+    }
+
+
+    &-filter {
+        display: flex;
+
+        &__title {}
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        &__item {
+            
+            &:not(:last-child) {
+                margin-right: 20px;
+                color: #212121;
+            }
+        }
+
+        &__link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            transition: .3s color;
+
+            &.active, &:hover {
+                color: #FFB82E;
+                border-bottom: 2px solid #FFB82E;
+                padding-bottom: 5px;
+            }
+        }
+
+    }
+
+}
+
+
+.restaraunts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    margin-left: -20px;
+    margin-top: -30px;
+
+    &-item {
+        width: calc(25% - 20px);
+        margin-left: 20px;
+        margin-top: 30px;
+
+        &-image {
+            width: 100%;
+            display: flex;
+            margin-bottom: 15px;
+
+            img {
+                width: 100%;
+                
+            }
+        }
+
+        &-info {
+
+            &__title {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+
+            &__list {
+                display: flex;
+            }
+
+            &__item {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                span {
+                    margin-right: 6px;
+                }
+
+                &.rating {
+                    color: #FFB82E;
+                }
+            }
+        }
+    }
+}

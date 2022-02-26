@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation } from 'swiper'; // Pagination, Scrollbar, A11y
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import img from '../../../assets/img/main/slider/1.jpg'
 import img2 from '../../../assets/img/main/slider/2.jpg'
@@ -10,6 +10,7 @@ import img6 from '../../../assets/img/main/slider/6.jpg'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+
 
 interface SliderProps {
 
@@ -53,9 +54,7 @@ const Slider: FC<SliderProps> = ({children}) => {
                     // eslint-disable-next-line no-param-reassign
                     swiper.navigation.destroy()
                     swiper.navigation.init()
-                    swiper.navigation.update()
-                    console.log(swiper.params.navigation);
-                    
+                    swiper.navigation.update()                    
                 }}
             >
                 

@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import Restaraunt from './restaurant/main/Restaraunt'
 import Slider from './slider/main/Slider'
 
 
@@ -19,6 +20,8 @@ const Main: FC<MainProps> = (
                 <div className="main__wrap">
                     
                     <Slider/>
+
+                    <Restaraunt />
 
                 </div>
             </div>

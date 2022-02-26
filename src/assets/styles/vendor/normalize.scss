@@ -43,6 +43,10 @@ h1 {
   margin: 0;
 }
 
+h2, h3, h4 {
+  margin: 0;
+}
+
 /* Grouping content
    ========================================================================== */
 
@@ -76,6 +80,7 @@ pre {
 
 a {
   background-color: transparent;
+  color: inherit;
 }
 
 /**
@@ -355,4 +360,10 @@ template {
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
