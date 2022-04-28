@@ -1,0 +1,139 @@
+.footer {
+    background: #F8F8F8;
+    color: #8A8894;
+
+    &__wrap {
+        padding-top: 60px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        &--line {
+            margin-top: 85px;
+            border: 1px solid #E8E6F8;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+    }
+
+    &__col {
+        width: 200px;
+        max-width: 200px;
+        // background: teal;
+    }
+
+    &-menu {
+
+        &__link {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            
+            a {
+                transition: .3s color;
+            }
+            
+            &:hover {
+                a {
+                    color: #000;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-app,&-social {
+
+        &__title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &-app {
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            &__link {
+                display: flex;
+                margin-bottom: 10px;
+
+                a {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &-social {
+
+        &-list {
+            display: flex;
+
+            &__link {
+                width: 34px;
+                height: 34px;
+                background: #8A8894;
+                border-radius: 50%;
+                transition: .3s background;
+
+                &:hover {
+                    background: #000;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+                
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    // &:hover {
+
+                    //     svg,path {
+                    //         fill: red
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        color: #8A8894;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+
+        &__copy {
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        &__link {
+            display: flex;
+            transition: .3s all;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+}
