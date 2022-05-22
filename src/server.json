@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "img": "/assets/img/restaurants/1.jpg",
+        "name": "BURGER AVENUE",
+        "time": "40-55 мин",
+        "price": 1000,
+        "rating": "4.0",
+        "filter": 1,
+        "is_open": 1
+    },
+    {
+        "id": 2,
+        "img": "/assets/img/restaurants/2.jpg",
+        "name": "Точка",
+        "time": "40-55 мин",
+        "price": 2000,
+        "rating": "2.0",
+        "filter": 2,
+        "is_open": 0
+    },
+    {
+        "id": 3,
+        "img": "/assets/img/restaurants/3.jpg",
+        "name": "Криспи",
+        "time": "40-55 мин",
+        "price": 3000,
+        "rating": "3.3",
+        "filter": 3,
+        "is_open": 1
+    },
+    {
+        "id": 4,
+        "img": "/assets/img/restaurants/4.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 1000,
+        "rating": "5.0",
+        "filter": 3,
+        "is_open": 0
+    },
+    {
+        "id": 5,
+        "img": "/assets/img/restaurants/5.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 4000,
+        "rating": "5.0",
+        "filter": 3,
+        "is_open": 1
+    },
+    {
+        "id": 6,
+        "img": "/assets/img/restaurants/6.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 4000,
+        "rating": "5.0",
+        "filter": 1,
+        "is_open": 1
+    },
+    {
+        "id": 7,
+        "img": "/assets/img/restaurants/7.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 3000,
+        "rating": "5.0",
+        "filter": 4,
+        "is_open": 0
+    },
+    {
+        "id": 8,
+        "img": "/assets/img/restaurants/8.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 4000,
+        "rating": "5.0",
+        "filter": 4,
+        "is_open": 1
+    },
+    {
+        "id": 9,
+        "img": "/assets/img/restaurants/9.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 4000,
+        "rating": "5.0",
+        "filter": 1,
+        "is_open": 1
+    },
+    {
+        "id": 10,
+        "img": "/assets/img/restaurants/10.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 10000,
+        "rating": "5.0",
+        "filter": 3,
+        "is_open": 0
+    },
+    {
+        "id": 11,
+        "img": "/assets/img/restaurants/5.jpg",
+        "name": "Дадди пицца",
+        "time": "40-55 мин",
+        "price": 2500,
+        "rating": "1.0",
+        "filter": 4,
+        "is_open": 1
+    }
+]

@@ -1,4 +1,4 @@
-.main-restaraunt {
+.main-restaurant {
     margin-top: 40px;
 
     &__title {
@@ -8,11 +8,11 @@
         margin-bottom: 20px;
     }
 
-
     &-filter {
         display: flex;
 
-        &__title {}
+        &__title {
+        }
 
         &__wrap {
             display: flex;
@@ -21,7 +21,6 @@
         }
 
         &__item {
-            
             &:not(:last-child) {
                 margin-right: 20px;
                 color: #212121;
@@ -32,21 +31,107 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 20px;
-            transition: .3s color;
+            transition: 0.3s color;
 
-            &.active, &:hover {
-                color: #FFB82E;
-                border-bottom: 2px solid #FFB82E;
+            &.active,
+            &:hover {
+                color: #ffb82e;
+                border-bottom: 2px solid #ffb82e;
                 padding-bottom: 5px;
+                cursor: pointer;
             }
         }
 
-    }
+        // SORT
 
+        &-sort {
+            display: flex;
+
+            &-time {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 16px;
+                position: relative;
+                z-index: 99;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+
+                &__label {
+                    margin-right: 10px;
+                }
+
+                &__value {
+                    display: flex;
+                    align-items: center;
+                    color: #8a8894;
+                    transition: 0.3s color;
+
+                    &:hover {
+                        color: #ffb82e;
+                        cursor: pointer;
+                    }
+
+                    svg {
+                        width: 10px;
+                        height: 5px;
+                        margin-left: 5px;
+                        margin-top: 3px;
+                    }
+                }
+
+                &__popup {
+                    display: flex;
+                    flex-direction: column;
+                    width: 120px;
+                    background: #fff;
+                    position: absolute;
+                    right: 0;
+                    top: 30px;
+                    border-radius: 3px;
+                    font-weight: 500;
+                    font-size: 14px;
+
+                    box-shadow: 0px 3px 8px 0px rgba(34, 60, 80, 0.2);
+
+                    span {
+                        padding: 10px;
+                        cursor: pointer;
+                        color: #8a8894;
+                        transition: 0.3s background-color, 0.3s color;
+
+                        &:hover,
+                        &.active {
+                            // background-color: #ffb82e;
+                            color: #000;
+                        }
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid rgb(241, 241, 241);
+                        }
+                    }
+                }
+
+                &--icon {
+                    display: flex;
+                    align-items: center;
+
+                    .main-restaurant-filter-sort-time__icon {
+                        display: flex;
+                        margin-right: 10px;
+                    }
+                    .main-restaurant-filter-sort-time__value {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
 }
 
-
-.restaraunts {
+.restaurants {
     display: flex;
     flex-wrap: wrap;
     margin-top: 35px;
@@ -62,15 +147,30 @@
             width: 100%;
             display: flex;
             margin-bottom: 15px;
+            position: relative;
 
             img {
                 width: 100%;
-                
+            }
+
+            &__notice {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 5px;
+                color: #000;
+                font-size: 13px;
+                display: flex;
+
+                svg,
+                path {
+                    stroke: #fff;
+                }
             }
         }
 
         &-info {
-
             &__title {
                 font-weight: 600;
                 font-size: 18px;
@@ -98,7 +198,7 @@
                 }
 
                 &.rating {
-                    color: #FFB82E;
+                    color: #ffb82e;
                 }
             }
         }
