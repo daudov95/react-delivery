@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from "react";
+import React, { FC, useState } from "react";
 import { IRestaurant } from "../../main/Restaurant";
 
 interface Ilist {
@@ -9,22 +9,22 @@ interface Ilist {
 interface IFilter {
     list: Ilist[];
     restList: IRestaurant[];
-    handle: ([]: IRestaurant[]) => void;
+    handler: ([]: IRestaurant[]) => void;
 }
 
-const Filter: FC<IFilter> = ({ list, handle, restList }) => {
+const Filter: FC<IFilter> = ({ list, handler, restList }) => {
     const [category, setCategory] = useState<number>(0);
 
-    const filterHandle = (e: any) => {
+    const filterHandler = (e: any) => {
         const activeFilter = +e.currentTarget.dataset.filter;
         setCategory(activeFilter);
 
         if (activeFilter === 0) {
-            handle([...restList]);
+            handler([...restList]);
             return;
         }
 
-        handle([...restList.filter((item) => item.filter === activeFilter)]);
+        handler([...restList.filter((item) => item.filter === activeFilter)]);
     };
 
     return (
@@ -39,7 +39,7 @@ const Filter: FC<IFilter> = ({ list, handle, restList }) => {
                         className={`main-restaurant-filter__link ${
                             i === category ? "active" : ""
                         }`}
-                        onClick={filterHandle}
+                        onClick={filterHandler}
                     >
                         {item.title}
                     </span>

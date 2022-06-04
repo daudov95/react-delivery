@@ -1,6 +1,8 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 interface RestaurantItemDataProps {
+    id: number;
     img: string;
     name: string;
     time: string;
@@ -14,7 +16,7 @@ interface RestaurantItemProps {
 }
 
 const RestaurantItem: FC<RestaurantItemProps> = ({ data, children }) => {
-    // console.log(data.is_open);
+    // console.log(data.id);
 
     return (
         <div className="restaurants-item">
@@ -69,13 +71,13 @@ const RestaurantItem: FC<RestaurantItemProps> = ({ data, children }) => {
                         />
                     </svg> */}
 
-                <a href="#">
+                <Link to={`restaurant/${data.id}`}>
                     <img src={data.img} alt="restaurant" />
-                </a>
+                </Link>
             </div>
             <div className="restaurants-item-info">
                 <h3 className="restaurants-item-info__title">
-                    <a href="#">{data.name}</a>
+                    <Link to={`restaurant/${data.id}`}>{data.name}</Link>
                 </h3>
                 <ul className="restaurants-item-info__list">
                     <li className="restaurants-item-info__item">{data.time}</li>

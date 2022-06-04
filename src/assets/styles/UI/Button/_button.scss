@@ -1,0 +1,23 @@
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 6px 11px;
+    background: #f4f3fe;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s background;
+    width: 23px;
+    height: 23px;
+
+    &:hover {
+        cursor: pointer;
+        background: darken(#f4f3fe, 3);
+    }
+
+    svg {
+        display: flex;
+        margin-top: 1px;
+    }
+}

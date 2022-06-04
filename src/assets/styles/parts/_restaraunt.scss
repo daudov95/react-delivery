@@ -132,16 +132,19 @@
 }
 
 .restaurants {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+    // display: flex;
+    // flex-wrap: wrap;
     margin-top: 35px;
-    margin-left: -20px;
-    margin-top: -30px;
+    // margin-left: -20px;
+    // margin-top: -30px;
 
     &-item {
-        width: calc(25% - 20px);
-        margin-left: 20px;
-        margin-top: 30px;
+        // width: calc(25% - 20px);
+        // margin-left: 20px;
+        // margin-top: 30px;
 
         &-image {
             width: 100%;
@@ -162,6 +165,7 @@
                 color: #000;
                 font-size: 13px;
                 display: flex;
+                border-radius: 3px;
 
                 svg,
                 path {

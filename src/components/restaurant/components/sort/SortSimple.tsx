@@ -4,20 +4,20 @@ interface ISort {
     icon: string;
     label: string;
     list: string[];
-    handle: (selected: number) => void;
+    handler: (selected: number) => void;
 }
 
-const SortSimple: FC<ISort> = ({ icon, label, list, handle }) => {
+const SortSimple: FC<ISort> = ({ icon, label, list, handler }) => {
     const [open, setOpen] = useState<boolean>(false);
     const [current, setCurrent] = useState<number>(0);
 
-    const sortHandle = () => {
+    const sortHandler = () => {
         setOpen(!open);
     };
-    const selectHandle = (select: number) => {
+    const selectHandler = (select: number) => {
         setOpen(!open);
         setCurrent(select);
-        handle(select);
+        handler(select);
     };
 
     return (
@@ -29,7 +29,7 @@ const SortSimple: FC<ISort> = ({ icon, label, list, handle }) => {
 
                 <span
                     className="main-restaurant-filter-sort-time__value"
-                    onClick={sortHandle}
+                    onClick={sortHandler}
                 >
                     {label}
                 </span>
@@ -37,7 +37,7 @@ const SortSimple: FC<ISort> = ({ icon, label, list, handle }) => {
                     <div className="main-restaurant-filter-sort-time__popup">
                         {list.map((item, i) => (
                             <span
-                                onClick={() => selectHandle(i)}
+                                onClick={() => selectHandler(i)}
                                 className={i === current ? "active" : ""}
                                 key={i}
                             >

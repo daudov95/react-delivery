@@ -1,7 +1,9 @@
-@import 'vendor/normalize';
+@import "vendor/normalize";
+@import "vendor/UI";
 
-body, html {
-    font-family: 'Montserrat', sans-serif;
+body,
+html {
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 15px;
 }
@@ -21,15 +23,21 @@ body, html {
     padding-right: 15px;
 }
 
-
 /* HEADER */
-@import 'parts/_header';
+@import "parts/_header";
 
 /* MAIN */
-@import 'parts/_main';
+@import "parts/_main";
 
 /* FOOTER */
-@import 'parts/_footer';
+@import "parts/_footer";
 
 /* RESUTARAUNT */
-@import 'parts/_restaraunt';
+@import "parts/_restaraunt";
+
+/* STORE PAGE */
+@import "parts/_store";
+
+// VENDOR
+
+@import "vendor/customScrollbar";

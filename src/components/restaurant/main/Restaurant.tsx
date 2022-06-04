@@ -1,10 +1,11 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 // import img from "../../../assets/img/main/restaurants/1.jpg";
 import Filter from "../components/filter/Filter";
 import Sort from "../components/sort/Sort";
 import RestaurantItem from "../item/RestaurantItem";
 import server from "../../../server.json";
 import SortSimple from "../components/sort/SortSimple";
+import Skeleton from "../item/Skeleton";
 
 const filter = [
     {
@@ -47,13 +48,23 @@ export interface IRestaurant {
 // console.log(server);
 
 const Restaurant: FC = () => {
-    const [restaurants, setRestaurants] = useState<IRestaurant[]>(server);
+    const [restaurants, setRestaurants] = useState<IRestaurant[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+
+    useEffect(() => {
+        fetch("https://628bde6e7886bbbb37c089da.mockapi.io/api/v1/restaurants")
+            .then((res) => res.json())
+            .then((data) => {
+                setRestaurants(data);
+                setIsLoading(false);
+            });
+    }, []);
 
     const timeSort = ["все", "сейчас", "test"];
     const sort = ["по рейтингу", "по цене +", "по цене -"];
 
-    const timeSortHandle = (selected: number) => {
-        console.log("timeSortHandle", selected);
+    const timeSortHandler = (selected: number) => {
+        console.log("timeSortHandler", selected);
 
         if (selected === 0) {
             setRestaurants([...restaurants]);
@@ -66,8 +77,8 @@ const Restaurant: FC = () => {
         }
     };
 
-    const sortHandle = (selected: number) => {
-        console.log("sortHandle", selected);
+    const sortHandler = (selected: number) => {
+        console.log("sortHandler", selected);
 
         if (selected === 0) {
             setRestaurants([
@@ -89,6 +100,16 @@ const Restaurant: FC = () => {
     };
 
     const printrestaurants = () => {
+        if (isLoading) {
+            return (
+                <div className="main-restaurant__list restaurants">
+                    {[...Array(8)].map((_, i) => (
+                        <Skeleton key={i} />
+                    ))}
+                </div>
+            );
+        }
+
         return restaurants.length > 0 ? (
             <div className="main-restaurant__list restaurants">
                 {restaurants.map((el: IRestaurant) => (
@@ -107,20 +128,20 @@ const Restaurant: FC = () => {
                 <Filter
                     list={filter}
                     restList={server}
-                    handle={setRestaurants}
+                    handler={setRestaurants}
                 />
 
                 <div className="main-restaurant-filter-sort">
                     <Sort
                         label={"Доставка"}
                         list={timeSort}
-                        handle={timeSortHandle}
+                        handler={timeSortHandler}
                     />
                     <SortSimple
                         icon={"assets/img/icons/sort.svg"}
                         label={"Сортировка"}
                         list={sort}
-                        handle={sortHandle}
+                        handler={sortHandler}
                     />
                 </div>
             </div>
